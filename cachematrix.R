@@ -3,6 +3,17 @@
 ## Created by Ken, on Feb 7th, 2017
 
 ## Write a short comment describing this function
+## Creates a matrix object that has attributes:
+##
+## set
+##     Set value of the matrix
+## get
+##     Get value of the matrix
+## getInv
+##     Get inverse of the matrix, returns a cached result if it has
+##     already been evaluated
+## setInv
+##     Set the inverse of the matrix
 
 makeCacheMatrix <- function(x = matrix()) {
 	m <- NULL
@@ -18,6 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+
+## Expects `x` to be a `cacheMatrix` object.
+## Computes the inverse of `x` if the result is not cached; otherwise it returns a cached result.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
